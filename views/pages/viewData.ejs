@@ -1,0 +1,39 @@
+<style>
+  table,
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<body>
+  <h1>Go, get the data!</h1>
+  <br />
+  <table>
+    <thead>
+      <tr>
+        <th>Job Name</th>
+        <th>PartID</th>
+        <th>Qty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% jobs_parts.forEach(function(part){%>
+      <tr>
+        <td><%= part.jobName%></td>
+        <td><%= part.partId%></td>
+        <td><%= part.qty%></td>
+      </tr>
+      <% })%>
+    </tbody>
+  </table>
+</body>
+<br />
+<form action="/">
+  <button>Home</button>
+</form>
+<br />
+<form action="/addData">
+  <button>Add data</button>
+</form>
